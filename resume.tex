@@ -1,0 +1,226 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{hyperref}
+    \usepackage{enumitem}
+    \setlist{nosep}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage{tgschola}
+    \usepackage[left=0.4in,right=0.4in,bottom=0.1in,top=0.1in]{geometry}
+
+% ----------- Definations -----------
+
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = blue, %Colour of internal links
+}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+% ----------- End of definations -----------
+
+\begin{document}
+% ----------- Profile -----------
+
+\begin{center}
+	{\Huge \scshape {Aryan Pathania}}\\
+	\vspace{0.5mm}
+	India $\cdot$ \href{mailto: aryan.pathania2003@gmail.com}{aryan.pathania2003@gmail.com} $\cdot$ +91 94592 55020\\
+	\vspace{0.5mm}
+	\href{https://aryanpathania.vercel.app/}{Portfolio} $\cdot$
+	\href{https://linkedin.com/in/aynp/}{LinkedIn (aynp)} $\cdot$
+	\href{https://www.github.com/aynp}{GitHub (aynp)} $\cdot$
+	\href{https://www.github.com/aynp}{Codeforces (nand)} \\
+\end{center}
+
+\vspace{-4mm}
+% ----------- Education -----------
+
+\header{Education}
+\vspace{1mm}
+
+\textbf{National Institute of Technology, Hamirpur}\hfill Hamirpur\\
+Computer Science \& Engineering, B.Tech., \textit{CGPA: 8.65} \hfill Dec 2020 - Present\\
+\vspace{1.5mm}
+
+
+\header{Work Experience}
+\vspace{1mm}
+
+\textbf{Mercari Inc} \hfill Bangalore\\
+\textit{Backend Developer Intern} \hfill May 2023 - Present\\
+\begin{itemize}
+	\item Built CI pipelines for automatic building, linting, testing and deploying of 11 microservices.
+    \item Reduced delay in real time incentive distribution due to batch incentive distributions.
+\end{itemize}
+\vspace{1.5mm}
+
+\textbf{SynergyWorks} \hfill Chandigarh\\
+\textit{Backend Developer Intern} \hfill Mar 2023 - Present\\
+\begin{itemize}
+	\item Improved search by replacing slow regex matching with full text MongoDB Atlas Search.
+\end{itemize}
+\vspace{1.5mm}
+
+\textbf{Coding Shuttle} \hfill Remote\\
+\textit{Backend Developer Intern} \hfill Jan 2023 - Mar 2023\\
+\begin{itemize}
+  \item Created an API from scratch for Problems List, Single Problem, Solutions, Leaderboard etc.
+	\item Created an API to handle solution submissions, run multiple test cases and verify the validity of the solution.
+\end{itemize}
+\vspace{1.5mm}
+
+\textbf{Codeintuition.io} \hfill Remote\\
+\textit{Problem Setter} \hfill Nov 2022 - Dec 2022\\
+\begin{itemize}
+	\item Generated testcases and optimal solutions for problems based on Data Structures and Algorithms.
+\end{itemize}
+\vspace{1.5mm}
+
+% ----------- Volunteer Experience -----------
+
+\header{Volunteer Experience}
+\vspace{1mm}
+
+\textbf{Apache APISIX Ingress Controller}\\
+\textit{Open Source Contributor} \hfill Dec 2022 - Present\\
+\begin{itemize}
+	\item Added support for \texttt{filter\_func} for ApisixRoute allowing complex route matching.
+    \item Added support for \texttt{skip\_mtls\_uri\_regex} for ApisixTls allowing mTLS bypass based on regex against URI.
+\end{itemize}
+\vspace{1.5mm}
+
+\textbf{CSEC NITH} \hfill NIT Hamirpur\\
+\textit{President} \hfill Apr 2021 - Present\\
+\begin{itemize}
+	\item Designed problems and wrote editorials for monthly programming contest, Heuristics.
+	\item Volunteered on 'Software Freedom Day', promoted FOSS and installed linux distributions on 50+ PCs.
+\end{itemize}
+\vspace{1.5mm}
+
+\textbf{CodeChef NITH Chapter} \hfill NIT Hamirpur\\
+\textit{Chapter Leader} \hfill Jul 2021 - Jan 2022\\
+\begin{itemize}
+%    \item Worked in a team of 4 to promote competitive programming culture in college.
+	\item Organized workshops on topics 'Introduction to Competitive Programming' and 'STL' (100+ attendees each).
+	\item Conducted numerous programming contests like 'Regular Contest 1', 'CP Liftoff' etc (50+ participants each).
+\end{itemize}
+\vspace{1.5mm}
+
+\textbf{CutefishOS Ubuntu}\\
+\textit{Open Source Contributor} \hfill Apr 2021 - Dec 2021\\
+\begin{itemize}
+	\item Managed the dependencies of 10 core applications while porting from Arch base to Ubuntu base.
+	% \item Set up GitHub actions, which runs every 12 hours to keep Ubuntu base fork up to sync with Arch base.
+\end{itemize}
+\vspace{1.5mm}
+
+% ----------- Projects -----------
+
+\header{Projects}
+\vspace{1mm}
+
+{\textbf{Portfolio}} {\sl Next.js, MDX} \hfill \href{https://github.com/aynp/portfolio}{aynp/portfolio}\\
+\begin{itemize}
+	\item Portfolio website to showcase projects, post blogs and frequently used code snippets.
+	\item A timeline for important milestones in my career.
+\end{itemize}
+\vspace*{1.5mm}
+
+{\textbf{Node Automatic Release}} {\sl JavaScript, GitHub Actions} \hfill \href{https://github.com/aynp/node-automatic-release}{aynp/node-automatic-release}\\
+\begin{itemize}
+	\item Automatically generate a new release for node projects when the version in your package.json changes.
+	\item Can be used seamlessly with workflows provided by GitHub to \href{https://aryanpathania.vercel.app/blog/automatic-npm-publish}{Automatically publish to NPM}.
+\end{itemize}
+\vspace*{1.5mm}
+
+% {\textbf{GitHub to JSON}} {\sl JavaScript, Octocat} \hfill \href{https://github.com/aynp/github-to-json}{aynp/github-to-json}\\
+% \begin{itemize}
+% 	\item Generate JSON file of a repository structure using GitHub API.
+% 	\item Enables usage of GitHub as a free CMS.
+% \end{itemize}
+% \vspace*{1.5mm}
+
+{\textbf{Dracula Wallpapers Website}} {\sl ReactJS} \hfill \href{https://dracula-wallpapers.netlify.app/}{dracula-wallpapers.netlify.app}\\
+\begin{itemize}
+	\item Website made for community, having collection wallpapers based on the Dracula Theme.
+	\item Created 80+ wallpapers \href{https://github.com/aynp/dracula-wallpapers}{aynp/dracula-wallpapers} (200+ stars).
+\end{itemize}
+\vspace*{1.5mm}
+
+%{\textbf{NFT Warranty}} {\sl Svelte, Ethereum/Solidity, Hardhat} \hfill \href{https://github.com/aynp/nft-warranty}{aynp/nft-warranty}\\
+%\begin{itemize}
+%	\item Replace physical warranties and have blockchain based warranties using NFTs which prevent forgery and are easier to maintain.
+%    \item Customers can easily verify the ownership of warranty and track all repairs and replacements to the product.
+%\end{itemize}
+%\vspace*{1.5mm}
+
+
+{\textbf{CodeShare}} {\sl ExpressJS, MongoDB/Mongoose, bcrypt} \hfill \href{https://github.com/aynp/codeshare-server}{aynp/codeshare-server}\\
+\begin{itemize}
+	\item Server for CodeShare (A web app to share formatted code with syntax highlighting online.
+\end{itemize}
+\vspace*{1.5mm}
+
+
+% ----------- Awards -----------
+
+\header{Awards}
+\vspace{1mm}
+
+\textbf{Google 30 Days of Cloud} \hfill Qwiklabs\\
+Completed Google 30 Days of Cloud on \href{https://www.qwiklabs.com/public_profiles/4c78c6d8-ad43-4991-b8fe-03e559c1bac5}{Qwiklabs}. \hfill 31 Oct 2021\\
+\vspace*{1mm}
+
+\textbf{The Grand Coding Contest} \hfill Newton School\\
+Ranked \href{https://www.linkedin.com/posts/aynp_aryan-has-secured-rank-495-in-newtons-grand-activity-6841777869484642304-Za36}{495th} among 50,000+ contestants in The Grand Newton Contest 2021 by Newton School. \hfill 27 Aug 2021\\
+\vspace*{1mm}
+
+%\textbf{Teams Code Virtual Programming Contest} \hfill TeamsCode\\
+%Team (no\_AC) Ranked \href{https://youtu.be/eCylTCHctY0?t=16137}{4th} in Summer 2021 Virtual Programming Contest by TeamsCode. \hfill 1 Aug 2021\\
+%\vspace*{1mm}
+
+\textbf{CodeRush Rank 1 from Second Year} \hfill Algo University\\
+Ranked 1st from second year in CodeRush organized by ALGO University. \hfill 20 May 2021\\
+\vspace*{1.5mm}
+
+
+% ----------- Skills -----------
+
+\header{Skills}
+\vspace{1mm}
+% \begin{tabular}{ l l }
+\textbf{Languages:} Go, JavaScript, TypeScript
+\quad \textbf{Frameworks:} React, Next, Express
+\quad \textbf{Databases:} Postgres, MySQL, MongoDB
+\quad \textbf{Tools:} Git, GNU/Linux, Docker, Kubernetes, GitHub Actions, Spinnaker, GCP
+\quad \textbf{Others:} Bash, Terraform, Markdown, \LaTeX, Data Structures and Algorithms
+% \end{tabular}
+\vspace{1.5mm}
+
+\end{document}

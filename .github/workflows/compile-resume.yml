@@ -1,0 +1,47 @@
+name: "🏗️ Recompile resume"
+on:
+    workflow_dispatch:
+    push:
+        branches:
+            - main
+        paths:
+            - resume.tex
+jobs:
+    recompile-resume:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+            - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+
+            - name: Install deps
+              run: sudo apt-get install texlive-latex-base poppler-utils texlive-latex-extra tex-gyre --no-install-recommends
+
+            - name: Check out repository code
+              uses: actions/checkout@v3
+
+            - name: Tex to PDF
+              run: pdflatex resume.tex
+
+            - name: PDF to png
+              run: pdftoppm -png resume.pdf resume
+
+            - name: Create Pull Request
+              id: cpr
+              uses: peter-evans/create-pull-request@v4
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  commit-message: "🏗️ Recompile resume"
+                  #committer: ${{github.repository_owner}} <aryan.pathania2003@gmail.com>
+                  committer: ${{github.repository_owner}} <${{ github.repository_owner }}@users.noreply.github.com>
+                  #author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+                  author: ${{github.repository_owner}} <${{ github.repository_owner }}@users.noreply.github.com>
+                  signoff: false
+                  branch: recompile-resume
+                  delete-branch: true
+                  title: "🏗️ Recompile resume"
+                  body: |
+                      The resume was recompiled by GitHub Action 'Recompile Resume'
+                  labels: |
+                      recompilation
+                  reviewers: ${{ github.repository_owner }}
+                  draft: false
